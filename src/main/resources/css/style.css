@@ -1,0 +1,323 @@
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+
+.root, .dashboard-root, .form-root {
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+    -fx-background-color: #F7F9FC;
+}
+
+/* =========================
+   HEADER / TOP NAV
+   ========================= */
+
+.top-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 12 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0.1, 0, 2);
+}
+
+.title-text {
+    -fx-font-size: 22px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #333;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.button {
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 8 18;
+    -fx-font-weight: 600;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* ---- Primary Button ---- */
+.button.primary {
+    -fx-background-color: linear-gradient(to right, #006CFF, #338CFF);
+    -fx-text-fill: white;
+}
+
+/* ---- Secondary Button ---- */
+.button.secondary {
+    -fx-background-color: #EFF1F5;
+    -fx-text-fill: #333;
+    -fx-border-color: #d9d9d9;
+    -fx-border-radius: 8;
+}
+
+.button.secondary:hover {
+    -fx-background-color: #e6e8ec;
+}
+
+/* =========================
+   SEARCH FIELDS
+   ========================= */
+
+.text-field {
+    -fx-background-radius: 8;
+    -fx-padding: 6 12;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #D9E1EC;
+    -fx-border-radius: 8;
+}
+
+.text-field:focused {
+    -fx-border-color: #006CFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,108,255,0.2), 12, 0.2, 0, 2);
+}
+
+/* =========================
+   TABLE VIEW
+   ========================= */
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f0f4f8;
+    -fx-padding: 10;
+}
+
+.table-view .column-header {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #444;
+}
+
+.table-view .table-row-cell {
+    -fx-background-radius: 6;
+    -fx-padding: 4;
+}
+
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #dce6ff;
+    -fx-text-fill: #000;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 13px;
+}
+
+/* Hover row effect */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #f2f6ff;
+}
+
+/* =========================
+   FORMS
+   ========================= */
+
+.form-header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 16 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0.1, 0, 2);
+}
+
+.form-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #333;
+}
+
+/* Form fields */
+
+.combo-box, .date-picker, .text-field {
+    -fx-background-radius: 8;
+}
+
+.date-picker .arrow-button,
+.combo-box .arrow-button {
+    -fx-background-radius: 8;
+}
+
+/* Error label */
+
+.form-error-label {
+    -fx-text-fill: #D9534F;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}
+
+
+/* =========================
+   COUNT BADGE
+   ========================= */
+
+.count-badge {
+    -fx-background-color: #006CFF;
+    -fx-text-fill: white;
+    -fx-padding: 4 10;
+    -fx-background-radius: 12;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE SPACING
+   ========================= */
+
+VBox, HBox {
+    -fx-spacing: 14;
+}
+.logged-user-label {
+    -fx-font-size: 13px;
+    -fx-padding: 4 8;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-width: 0;
+    -fx-font-weight: 600;
+}
+
+.role-admin {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+}
+
+.role-manager {
+    -fx-background-color: #0275d8;
+    -fx-text-fill: white;
+}
+
+.role-staff {
+    -fx-background-color: #5cb85c;
+    -fx-text-fill: white;
+}
+
+.role-user {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+}
+
+.profile-image {
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 4,0.0,0,1 );
+    -fx-padding: 2;
+    -fx-border-radius: 16;
+}
+.table-edit-btn {
+    -fx-background-color: #0275d8;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 4 12;
+}
+
+.table-edit-btn:hover {
+    -fx-background-color: #025aa5;
+}
+
+.table-delete-btn {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 4 12;
+}
+
+.table-delete-btn:hover {
+    -fx-background-color: #c9302c;
+}
+/* Edit Button */
+.table-edit-btn {
+    -fx-background-color: #0275d8;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 4 12;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.table-edit-btn:hover {
+    -fx-background-color: #025aa5;
+    -fx-scale-x: 1.07;
+    -fx-scale-y: 1.07;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6,0.2,0,1);
+}
+
+/* Delete Button */
+.table-delete-btn {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 4 12;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.table-delete-btn:hover {
+    -fx-background-color: #c9302c;
+    -fx-scale-x: 1.07;
+    -fx-scale-y: 1.07;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6,0.2,0,1);
+}
+
+/* ---------------------------- */
+/* STATUS BADGES                */
+/* ---------------------------- */
+
+.badge-confirmed {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-background-radius: 14;
+    -fx-padding: 4 12;
+    -fx-font-weight: 600;
+}
+
+.badge-pending {
+    -fx-background-color: #f5c542;
+    -fx-text-fill: #3a3a3a;
+    -fx-background-radius: 14;
+    -fx-padding: 4 12;
+    -fx-font-weight: 600;
+}
+
+.badge-checkedin {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-background-radius: 14;
+    -fx-padding: 4 12;
+    -fx-font-weight: 600;
+}
+
+.badge-checkedout {
+    -fx-background-color: #9e9e9e;
+    -fx-text-fill: white;
+    -fx-background-radius: 14;
+    -fx-padding: 4 12;
+    -fx-font-weight: 600;
+}
+
+.badge-cancelled {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 14;
+    -fx-padding: 4 12;
+    -fx-font-weight: 600;
+}
+
+.badge-noshow {
+    -fx-background-color: #ff8c42;
+    -fx-text-fill: white;
+    -fx-background-radius: 14;
+    -fx-padding: 4 12;
+    -fx-font-weight: 600;
+}
+
+.badge-default {
+    -fx-background-color: #bdbdbd;
+    -fx-text-fill: white;
+    -fx-background-radius: 14;
+    -fx-padding: 4 12;
+    -fx-font-weight: 600;
+}

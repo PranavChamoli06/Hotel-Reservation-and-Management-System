@@ -1,0 +1,35 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-background-color: linear-gradient(to bottom, #f7f9fc, #ffffff);
+}
+
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2b3a67;
+}
+
+.note {
+    -fx-font-size: 11px;
+    -fx-text-fill: #666666;
+}
+
+.text-field, .password-field {
+    -fx-pref-width: 250px;
+}
+
+.button {
+    -fx-background-color: #2b6fb6;
+    -fx-text-fill: white;
+    -fx-padding: 6 14 6 14;
+    -fx-background-radius: 6;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+#errorLabel {
+    -fx-text-fill: #b00020;
+    -fx-font-size: 12px;
+}

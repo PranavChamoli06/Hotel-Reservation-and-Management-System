@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.hotel.controller.DashboardController"
+            styleClass="dashboard-root">
+
+    <top>
+        <HBox spacing="12" alignment="CENTER_LEFT" styleClass="top-bar">
+
+            <ImageView fx:id="profileImage" fitHeight="32" fitWidth="32" styleClass="profile-image"/>
+
+            <Label text="Dashboard" styleClass="title-text"/>
+            <Label fx:id="loggedInUserLabel" styleClass="logged-user-label"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="switchAccountButton" text="Switch User" styleClass="secondary"/>
+
+            <MenuButton text="CSV Export" styleClass="secondary">
+                <items>
+                    <MenuItem text="All"     onAction="#handleCSVExportAll" />
+                    <MenuItem text="Daily"   onAction="#handleCSVExportDaily" />
+                    <MenuItem text="Monthly" onAction="#handleCSVExportMonthly" />
+                    <MenuItem text="Yearly"  onAction="#handleCSVExportYearly" />
+                </items>
+            </MenuButton>
+
+            <MenuButton text="Excel Export" styleClass="secondary">
+                <items>
+                    <MenuItem text="All"     onAction="#handleExcelExportAll" />
+                    <MenuItem text="Daily"   onAction="#handleExcelExportDaily" />
+                    <MenuItem text="Monthly" onAction="#handleExcelExportMonthly" />
+                    <MenuItem text="Yearly"  onAction="#handleExcelExportYearly" />
+                </items>
+            </MenuButton>
+
+            <MenuButton text="PDF Export" styleClass="secondary">
+                <items>
+                    <MenuItem text="All"     onAction="#handlePDFExportAll" />
+                    <MenuItem text="Daily"   onAction="#handlePDFExportDaily" />
+                    <MenuItem text="Monthly" onAction="#handlePDFExportMonthly" />
+                    <MenuItem text="Yearly"  onAction="#handlePDFExportYearly" />
+                </items>
+            </MenuButton>
+
+
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="16">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <HBox spacing="14" alignment="CENTER_LEFT">
+                <TextField fx:id="searchGuestField" promptText="Search by Guest Name"/>
+                <TextField fx:id="searchRoomField" promptText="Search by Room No."/>
+                <TextField fx:id="searchDateField" promptText="Search by Date (YYYY-MM-DD)"/>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="clearFiltersButton" text="Clear" styleClass="secondary"/>
+                <Button fx:id="newReservationButton" text="New Reservation" styleClass="primary"/>
+            </HBox>
+
+            <TableView fx:id="reservationTable" prefHeight="520" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="colGuest" text="Guest Name" prefWidth="150"/>
+                    <TableColumn fx:id="colRoom" text="Room No" prefWidth="80"/>
+                    <TableColumn fx:id="colType" text="Type" prefWidth="120"/>
+                    <TableColumn fx:id="colCheckIn" text="Check-In" prefWidth="120"/>
+                    <TableColumn fx:id="colCheckOut" text="Check-Out" prefWidth="120"/>
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="100"/>
+                    <TableColumn fx:id="colPrice" text="Price" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER_LEFT">
+                <padding><Insets top="8" bottom="0"/></padding>
+                <Label text="Total Reservations:"/>
+                <Label fx:id="totalLabel" styleClass="count-badge"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.hotel.controller.LoginController"
+      spacing="12" alignment="CENTER"
+      stylesheets="@/css/login.css">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label text="Hotel Reservation System" styleClass="title"/>
+
+    <GridPane hgap="10" vgap="10" maxWidth="360">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+        <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="usernameField" promptText="username" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="passwordField" promptText="password" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label fx:id="errorLabel" text="" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+
+        <HBox spacing="10" alignment="CENTER_RIGHT" GridPane.rowIndex="3" GridPane.columnIndex="1">
+            <Button fx:id="loginButton" text="Login" defaultButton="true"/>
+        </HBox>
+    </GridPane>
+
+    <Label text=" " /> <!-- spacer -->
+    <Label text="Contact admin if you can't login" styleClass="note"/>
+</VBox>

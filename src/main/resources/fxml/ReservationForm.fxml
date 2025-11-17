@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.hotel.controller.ReservationFormController"
+            styleClass="form-root">
+
+    <!-- ===================== HEADER ===================== -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="form-header">
+            <Label fx:id="titleLabel" text="Reservation Form" styleClass="form-title" />
+        </HBox>
+    </top>
+
+
+    <!-- ===================== FORM CENTER ===================== -->
+    <center>
+        <VBox spacing="18">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Guest Name -->
+            <VBox spacing="4">
+                <Label text="Guest Name:*" />
+                <TextField fx:id="guestNameField"
+                           promptText="Enter guest name" />
+            </VBox>
+
+            <!-- Phone -->
+            <VBox spacing="4">
+                <Label text="Phone:*" />
+                <TextField fx:id="phoneField"
+                           promptText="Enter phone number" />
+            </VBox>
+
+            <!-- Room Type -->
+            <VBox spacing="4">
+                <Label text="Room Type:*" />
+                <ComboBox fx:id="roomTypeCombo"
+                          prefWidth="260"
+                          promptText="Select room type (auto availability)" />
+            </VBox>
+
+            <!-- Dates -->
+            <HBox spacing="20">
+                <VBox spacing="4">
+                    <Label text="Check-In:*" />
+                    <DatePicker fx:id="checkInPicker"
+                                prefWidth="180" />
+                </VBox>
+
+                <VBox spacing="4">
+                    <Label text="Check-Out:*" />
+                    <DatePicker fx:id="checkOutPicker"
+                                prefWidth="180" />
+                </VBox>
+            </HBox>
+
+            <!-- Total Price -->
+            <VBox spacing="4">
+                <Label text="Total Price:" />
+                <TextField fx:id="totalPriceField"
+                           promptText="Auto-calculated"
+                           editable="false"
+                           style="-fx-background-color: #f3f3f3;" />
+            </VBox>
+
+            <!-- Error Message -->
+            <Label fx:id="formErrorLabel"
+                   text=""
+                   styleClass="form-error-label" />
+
+            <!-- Required Notice -->
+            <Label text="* required fields"
+                   style="-fx-font-size: 10px; -fx-text-fill: #666;" />
+
+        </VBox>
+    </center>
+
+
+    <!-- ===================== FOOTER BUTTONS ===================== -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="12">
+            <padding>
+                <Insets top="10" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Button fx:id="saveButton" text="Save" styleClass="primary" />
+            <Button fx:id="cancelButton" text="Cancel" styleClass="secondary" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,17 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+log/
+*.log
+
+# OS files
+.DS_Store
+
+# Java & Compiled files
+*.class
+
+# VSCode
+.vscode/
